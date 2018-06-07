@@ -1,5 +1,17 @@
 .canvas{
-  background-color: #F0FFFF;
+  background-color: #00FFFF;
   border: 2px solid black;
   cursor: none;
+}
+.reset{
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  height: 10%;
+  width: 20%;
+  font-size: 30px;
+  color: #9932CC;
+  background-color:  	#FFD700;
+  border: 2px solid black;
+  cursor: pointer;
 }
