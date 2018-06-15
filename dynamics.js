@@ -42,7 +42,7 @@ var audio = document.getElementById('audio');
 var gameover = document.getElementById('gameover');
 
 function init() {
-  x = 25, y = 25, xf = 26, yf = 26;
+  x = 25, y = 25, xf = 1000, yf = 1000;
   vel = 5;
   upspeedstate = false;
   upspeednumber = 0.5;
@@ -118,7 +118,7 @@ function drawBackground() {
   // upspeednumber = 1.5 + (cbegin-10)
  audio.playbackRate = playbackrate + (cbegin-10)/32.5;
 
-
+  console.log(audio.playbackRate);
   c.clearRect(0, 0, canvas.width, canvas.height);
   if (shootflag) shootx += shootspeed;
   if (shootx > width) shootflag = false;
@@ -298,7 +298,7 @@ function gameOver() {
 }
 
 function drawHitman() {
-  console.log(upspeednumber);
+  
 
   for (i = 0; i < length; i++)
     if (points[i].enemystate)
@@ -314,7 +314,7 @@ function drawDeep() {
     c.beginPath();
     c.save();
     c.fillStyle = "red";
-
+    // if(x+velx>=xf) console.log('hi');
     c.arc(x, y, 15, 0, 2 * Math.PI, false);
     c.fill();
     c.restore();
@@ -385,18 +385,34 @@ function drawComplexity(){
 
 function getPosition() {
 
+
   slope = (yf - y) / (xf - x);
   angle = Math.atan(slope) * 180 / Math.PI;
   vel = 5 + (cbegin - 10)/13;
   velx = vel * Math.cos(Math.atan(slope));
   vely = vel * Math.sin(-Math.atan(slope));
+
+
   if (xf < x) {
+
     velx = -velx;
     vely = -vely;
   }
 
+
+
+if(x+velx>xf)
+  {
+    if(x<xf){velx = 0;
+  vely = 0;
+}
+}
+
+
+
+
   x = x + velx;
-    y = y - vely;
+  y = y - vely;
 
 
   drawDeep();
