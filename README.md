@@ -1,4 +1,5 @@
-# DeltaCanvas
+# Flappy Canvas:-
+A minimal implementation of the game "flappy bird" using javascript
 
 ## Run
 
