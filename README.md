@@ -1,5 +1,5 @@
 # Flappy Canvas:-
-A minimal implementation of the game "flappy bird" using javascript
+A minimal implementation of the game "flappy bird" using HTML5 Canvas API
 
 ## Run
 
