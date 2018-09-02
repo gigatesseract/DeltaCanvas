@@ -37,7 +37,7 @@ width = canvas.width;
 var hitx, hity, hitposition;
 var upspeed = [];
 var sprite = new Image();
-sprite.src = "/spritesheet.png";
+sprite.src = "spritesheet.png";
 var audio = document.getElementById('audio');
 var gameover = document.getElementById('gameover');
 
