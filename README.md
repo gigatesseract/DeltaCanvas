@@ -10,4 +10,4 @@ A minimal implementation of the game "flappy bird" using HTML5 Canvas API
 * Mouse- move. 
 * Left mouse-button:- Shoot.
 
-Screenshots [here](
+Screenshots [here](https://imgur.com/a/WUZpxyz)
